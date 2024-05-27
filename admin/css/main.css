@@ -1,0 +1,315 @@
+*   {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+header  {
+    margin: 0 auto;
+    width: 1300px;
+}
+
+ul   {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+a   {
+    color: black;
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #444444;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-products {
+    padding: 80px 0 54px;
+}
+
+.section-products .header {
+    margin-bottom: 50px;
+}
+
+.section-products .header h3 {
+    font-size: 1rem;
+    color: #fe302f;
+    font-weight: 500;
+}
+
+.section-products .header h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #444444; 
+}
+
+.section-products .single-product {
+    margin-bottom: 26px;
+}
+
+.section-products .single-product .part-1 {
+    position: relative;
+    height: 290px;
+    max-height: 290px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.section-products .single-product .part-1::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: all 0.3s;
+}
+
+.section-products .single-product:hover .part-1::before {
+		transform: scale(1.2,1.2) rotate(5deg);
+}
+
+.section-products #product-1 .part-1::before {
+    background: url("https://images.acer.com/is/image/acer/nitro-v-16-anv16-41-non-fingerprint-with-backlit-on-wp-obsidian-black-01-1?$Series-Component-M1-M2-S$") no-repeat center;
+    background-size: cover;
+		transition: all 0.3s;
+}
+
+.section-products #product-2 .part-1::before {
+    background: url("https://images.acer.com/is/image/acer/acer-nitro-16-an16-73-non-fingerprint-with-4-zone-backlit-on-wp-black-01-1?$Series-Component-M1-M2-S$") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-3 .part-1::before {
+    background: url("https://images.acer.com/is/image/acer/acer-nitro-v-15-anv15-51-non-fingerprint-with-backlit-on-wp-black-01-1?$Series-Component-M1-M2-S$") no-repeat center;
+    background-size: cover;
+}
+
+.section-products #product-4 .part-1::before {
+    background: url("https://images.acer.com/is/image/acer/nitro5-an517-42-wallpaper-rgbkb-backlit-on-black-01?$Series-Component-M1-M2-S$") no-repeat center;
+    background-size: cover;
+}
+
+.section-products .single-product .part-1 .discount,
+.section-products .single-product .part-1 .new {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #ffffff;
+    background-color: #fe302f;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.section-products .single-product .part-1 .new {
+    left: 0;
+    background-color: #444444;
+}
+
+.section-products .single-product .part-1 ul {
+    position: absolute;
+    bottom: -41px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    transition: bottom 0.5s, opacity 0.5s;
+}
+
+.section-products .single-product:hover .part-1 ul {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.section-products .single-product .part-1 ul li {
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.section-products .single-product .part-1 ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ffffff;
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+    transition: color 0.2s;
+}
+
+.section-products .single-product .part-1 ul li a:hover {
+    color: #fe302f;
+}
+
+.section-products .single-product .part-2 .product-title {
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 h4 {
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.section-products .single-product .part-2 .product-old-price {
+    position: relative;
+    padding: 0 7px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+
+.section-products .single-product .part-2 .product-old-price::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #444444;
+    transform: translateY(-50%);
+}
+
+nav     {
+    display :flex;
+}
+
+nav>a   {
+    margin-left: 20px;
+}
+
+nav>ul  {
+    display :flex;
+    margin-top: 15px;
+}
+
+nav>ul>li  {
+    font-size: 20px;
+    padding: 0 10px;
+    font-weight: 600;
+}
+
+
+
+
+.nav-right  {
+    margin-right: 20px;
+}
+
+.icon {
+    font-size: 22px;
+}
+
+.header-icon    {
+    margin-right: 20px;
+}
+
+.banner-img     {
+    width: 100%;
+    height: 400px;
+}
+
+body{
+    margin-top:20px;
+    background-color: #fafafa !important;
+}
+@media (min-width: 0) {
+    .g-mb-30 {
+        margin-bottom: 2.14286rem !important;
+    }
+}
+
+@media (min-width: 0) {
+    .g-py-40 {
+        padding-top: 2.85714rem !important;
+        padding-bottom: 2.85714rem !important;
+    }
+}
+
+@media (min-width: 0) {
+    .g-px-20 {
+        padding-left: 1.42857rem !important;
+        padding-right: 1.42857rem !important;
+    }
+}
+@media (min-width: 0){
+    .g-mb-5 {
+        margin-bottom: 0.35714rem !important;
+    }
+}
+
+.g-bg-white {
+    background-color: #fff !important;
+}
+
+.u-shadow-v18 {
+    box-shadow: 0 5px 10px -6px rgba(0, 0, 0, 0.15);
+}
+
+.g-color-primary {
+    color: #72c02c !important;
+}
+
+.g-font-size-16 {
+    font-size: 1.14286rem !important;
+}
+
+.g-mb-10 {
+    margin-bottom: 0.71429rem !important;
+}
+
+.g-mb-10 {
+    margin-bottom: 0.71429rem !important;
+}
+
+.g-color-black {
+    color: #000 !important;
+}
+
+.g-font-weight-600 {
+    font-weight: 600 !important;
+}
+
+.containers     {
+    padding-top: 20px;
+}
+
+.title  {
+    padding-bottom: 10px;
+    font-size: 2.2rem;
+    color: #444444;
+}
+
+
+.title-login    {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
