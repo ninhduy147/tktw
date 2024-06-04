@@ -17,6 +17,13 @@
     }
 </style>
 </style>
+<?php if (isset($_SESSION['suscess'])) : ?>
+    <div class="suscess">
+        <?= $_SESSION['suscess'] ?>
+    </div>
+    <?php unset($_SESSION['suscess']) ?>
+
+<?php endif; ?>
 <a style="color:blue;" href="<?= BASE_URL_ADM  ?>?act=user_create"><button>Thêm User</button></a>
 
 <div class="table">
@@ -42,9 +49,14 @@
                 <td><?php echo $val['email'] ?></td>
                 <td><?php echo $val['phone_number'] ?></td>
                 <td><?php echo $val['name_role'] ?></td>
-                <td><?php echo $val['avatar'] ?></td>
                 <td>
-                    <a style="color:blue;" href="<?= BASE_URL_ADM ?>?act=detail_user&id=<?= $val['id'] ?>">Thông tin chi tiết</a>
+                    <img style="height : 70px; width:70px" src="<?php echo $val['avatar'] ?>" alt="">
+                </td>
+                <td>
+                    <a style="color:blue; border-right:1px solid gray;" href="<?= BASE_URL_ADM ?>?act=detail_user&id=<?= $val['id'] ?>">Detail</a>
+                    <a style="color:blue; border-right:1px solid gray;" href="<?= BASE_URL_ADM ?>?act=user_update&id=<?= $val['id'] ?>">Update</a>
+                    <a onclick="return confirm('Bạn Có Muốn Xóa ?')" style="color:blue; border-right:1px solid gray;" href="<?= BASE_URL_ADM ?>?act=user_delete&id=<?= $val['id'] ?>">Delete</a>
+
                 </td>
             </tr>
 

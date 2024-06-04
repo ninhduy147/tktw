@@ -1,3 +1,8 @@
+<?php
+// require_once dirname(__DIR__) . '/commons/session_check.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,11 +14,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./fontawesome-free-6.5.2-web/css/all.css">
+
 </head>
 
 <body>
     <div class="container">
         <header>
+
 
 
             <nav>
@@ -23,13 +30,13 @@
                 <ul>
 
                     <li>
-                        <a class="nav-link" href="#">Quản Lý Danh Mục Sản Phẩm</a>
+                        <a class="nav-link" href="<?= BASE_URL_ADM  ?>?act=categorys">Quản Lý Danh Mục Sản Phẩm</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">Quản Lý Sản Phẩm</a>
+                        <a class="nav-link" href="<?= BASE_URL_ADM  ?>?act=tags">Quản Lý Sản Phẩm</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">Quản Lý Comment</a>
+                        <a class="nav-link" href="<?= BASE_URL_ADM  ?>?act=comments">Quản Lý Comment</a>
                     </li>
                     <li>
                         <a class="nav-link" href="<?= BASE_URL_ADM  ?>?act=users ">Quản Lý User</a>
@@ -40,10 +47,15 @@
                 </ul>
             </nav>
 
+
             <nav class="nav-right">
                 <a href="#">
                     <i class="fa-solid fa-user-tie"></i>
                     Admin
+                </a>
+
+                <a href="<?= BASE_URL ?>">
+                    Logout
                 </a>
                 <!-- <a class="header-icon" href="#">
                     <i class="fa-solid icon fa-phone"></i>

@@ -107,12 +107,14 @@
 
             <tr>
                 <td>Role</td>
-                <td><?= $user['id_role'] ?></td>
+                <td>
+                    <?php echo $detail_tag['name_role'] ?>
+                </td>
             </tr>
 
             <tr>
                 <td>Avatar</td>
-                <td><?= $user['avatar'] ?></td>
+                <td><img style="height : 70px; width:70px" src="<?php echo $user['avatar'] ?>" alt=""></td>
             </tr>
         </table>
         <a style="color:blue;" href="<?= BASE_URL_ADM . '?act=users'  ?>"><button>Back to List Users</button></a>

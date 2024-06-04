@@ -26,3 +26,19 @@ if (!function_exists('e404')) {
         die;
     }
 }
+
+if (!function_exists('middleware_auth_check')) {
+    function middleware_auth_check($act)
+    {
+        if ($act === 'login') {
+            if (!empty($_SESSION['user'])) {
+                header('location: ' . BASE_URL_ADM);
+                exit();
+            }
+        } elseif (empty($_SESSION['user'])) {
+
+            header('location: ' . BASE_URL_ADM . '?act=login');
+            exit();
+        }
+    }
+}

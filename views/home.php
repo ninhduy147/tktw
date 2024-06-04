@@ -15,13 +15,14 @@
 
         <div class="container">
                 <header>
+
                         <nav>
-                                <a href="./home.php">
+                                <a href="<?= BASE_URL ?>">
                                         <img width="60" height="60" src="./img/logo.png" alt="">
                                 </a>
                                 <ul>
                                         <li>
-                                                <a class="nav-link" href="./home.php">Home</a>
+                                                <a class="nav-link" href="<?= BASE_URL ?>">Home</a>
 
                                         </li>
                                         <li>
@@ -41,12 +42,13 @@
                                 <a class="header-icon" href="#">
                                         <i class="fa-solid icon fa-cart-shopping"></i>
                                 </a>
-                                <a class="header-icon" href="./login.html">
+                                <a class="header-icon" href="<?= BASE_URL_ADM . '?act=login' ?>">
                                         <i class="fa-regular icon fa-user"></i>
                                 </a>
-                                <a href="<?= BASE_URL_ADM ?>">Ấn Vào Trang ADM</a>
+
                         </nav>
                 </header>
+
 
                 <!-- Banner  -->
                 <div class="banner">

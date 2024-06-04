@@ -7,41 +7,11 @@ require_once './commons/model.php';
 require_file(PATH_CONTROLLER);
 require_file(PATH_MODEL);
 // require_file(PATH_VIEW);
-
-// insert('users', [
-//     'username' => 'NinhDUy147',
-//     'password' => 'NinhDUy147',
-//     'email' => 'NinhDUy147@gmail.com',
-//     'phone_number' => '032645985',
-//     'role' => 'Thanh Vien',
-//     'avatar' => ''
-// ]);
-// die;
-
-// update('users', 4, [
-//     'username' => 'NinhDUy147',
-//     'password' => 'NinhDUy147',
-//     'email' => 'NinhDUy147@gmail.com',
-//     'phone_number' => '032645985',
-//     'role' => 'Thanh Vien',
-//     'avatar' => '',
-// ]);
-// die;
-
-// delete('users', 7);
-
-// $users = showOne('users', 1);
-// debug($users);
-
+require_file(PATH_MODEL_ADMIN);
 
 $act = $_GET['act'] ?? '/';
 
-// match ($act) {
-//     '/' => homeIndex(),
-//     'list_user' =>  list_user(),
-//     'detail_user' => detail_user($_GET['id']),
-// };
-match (true) {
+$result = match (true) {
     $act === '/' => homeIndex(),
     $act === 'list_user' => list_user(),
     strpos($act, 'detail_user') !== false => (function () {
@@ -50,11 +20,13 @@ match (true) {
             detail_user($_GET['id']);
         } else {
             // Xử lý khi không có tham số 'id' được truyền vào
+            echo "ID is required for detail_user action.";
         }
     })(),
+    default => (function () {
+        // Xử lý hành động mặc định khi không có case nào khớp
+        echo "Invalid action.";
+    })(),
 };
-
-
-
 
 require_once './commons/disconect.php';
